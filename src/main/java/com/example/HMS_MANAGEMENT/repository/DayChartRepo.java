@@ -14,4 +14,6 @@ public interface DayChartRepo extends JpaRepository<DayChartEntity,Long> {
 
     @Query("select sum(c.cusCost) from CustomerEntity c where c.firstVisit = :d")
     Integer totalCustomCost(LocalDate d);
+
+
 }
